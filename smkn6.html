@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMK Negeri 6 Malang</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #d50000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header .date {
+            font-size: 14px;
+        }
+        .header .title {
+            font-size: 36px;
+            margin: 0;
+        }
+        .header .subtitle {
+            font-size: 18px;
+            margin: 0;
+        }
+        .navbar {
+            background-color: #000;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #575757;
+        }
+        .navbar .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .navbar .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .navbar .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .navbar .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .navbar .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .navbar .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .trending-news {
+            background-color: #d50000;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+        }
+        .news-ticker {
+            background-color: #f1f1f1;
+            padding: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+        }
+        .news-ticker p {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker 15s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+        }
+        .content .news-item {
+            flex: 1 1 45%;
+            margin: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        .content .news-item img {
+            width: 100%;
+            height: auto;
+        }
+        .content .news-item .news-category {
+            background-color: #d50000;
+            color: white;
+            padding: 5px 10px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 14px;
+        }
+        .content .news-item .news-details {
+            padding: 10px;
+        }
+        .content .news-item .news-details h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .content .news-item .news-details .news-meta {
+            font-size: 14px;
+            color: #777;
+        }
+        .content .news-item .news-details .news-meta i {
+            margin-right: 5px;
+        }
+        /* Submenu handling */
+        .dropdown-content .submenu-box {
+           
+            position: absolute;
+            left: 10%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            padding: 10px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            color: black;
+        }
+        .dropdown-content .has-submenu:hover + .submenu-box {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="date">Thursday, November 07, 2024</div>
+        <div class="title">SMK Negeri 6 Malang</div>
+        <div class="subtitle">Maju Berkelajutan</div>
+    </div>
+    <div class="navbar">
+        <a href="#"><i class="fas fa-home"></i></a>
+        <div class="dropdown">
+            <button class="dropbtn">Profil <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="https://smkn6malang.sch.id/visi-dan-misi/">Visi & Misi</a>
+                <a href="https://smkn6malang.sch.id/sejarah-singkat/>">Sejarah</a>
+                <a href="#">Struktur Organisasi</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Kompetensi Keahlian <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Teknik Komputer dan Jaringan</a>
+                <a href="#">Rekayasa Perangkat Lunak</a>
+                <a href="#">Sistem Informasi Aplikasi dan</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Siswa <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Prestasi</a>
+                <a href="#">Ekstrakurikuler</a>
+                <a href="#">OSIS</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Alumni <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#">Testimoni</a>
+                <a href="#">Kegiatan</a>
+                <a href="#">Karir</a>
+            </div>
+        </div>
+        <a href="#">Lokasi</a>
+        <div class="dropdown">
+            <button class="dropbtn">Info PPDB <i class="fa fa-caret-down"></i></button>
+            <div class="dropdown-content">
+                <a href="#" class="has-submenu">Pendaftaran</a>
+                <div class="submenu-box">
+                    <a href="pendaftaran.html" >Form Pendaftaran</a> <!-- Tambahkan URL tujuan -->
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="trending-news">
+        <i class="fas fa-bolt"></i> Trending News
+    </div>
+    <div class="news-ticker">
+        <p>Kunjungan PT Konecranes Material Handling ke SMK Negeri 6 Malang: Meningkatkan Kolaborasi dan Kesempatan Kerja</p>
+    </div>
+    <div class="content">
+        <div class="news-item">
+            <img src="adiwiyata.jpeg" alt="Two students holding a painting">
+            <div class="news-category">Berita</div>
+            <div class="news-details">
+                <h3>Prestasi Tim Adiwiyata SMKN 6 Malang di Jambore Adiwiyata 2024</h3>
+                <div class="news-meta">
+                    <i class="fas fa-calendar-alt"></i> August 29, 2024
+                    <i class="fas fa-clock"></i> 1 min read
+                    <i class="fas fa-user"></i> Habib Asyhari
+                </div>
+            </div>
+        </div>
+        <div class="news-item">
+            <img src="https://smkn6malang.sch.id/wp-content/uploads/2024/10/lepas-alumni-tap-783x450.jpeg" alt="Group of alumni posing for a photo">
+            <div class="news-category">Rekrutmen</div>
+            <div class="news-details">
+                <h3>Melepas 7 Alumni 2024 SMK Negeri 6 Malang yang Telah Diterima Kerja di PT Triputra Agro Persada Kalimantan Timur</h3>
+                <div class="news-meta">
+                    <i class="fas fa-calendar-alt"></i> September 7, 2024
+                    <i class="fas fa-clock"></i> 2 min read
+                    <i class="fas fa-user"></i> Habib Asyhari
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+</body>
+</html>
